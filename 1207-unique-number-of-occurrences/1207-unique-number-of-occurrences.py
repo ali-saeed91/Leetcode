@@ -7,7 +7,7 @@ class Solution:
             count.append(v)
         # print(count)
         rev =sorted(count)
-        print(rev)
+        # print(rev)
         slist = list(set(count))
         # print(slist)
         slist.sort()
