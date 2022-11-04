@@ -18,5 +18,5 @@ class Solution:
             if idx.count(i) > 1:
                 return False
             
-        print(idx)
+        # print(idx)
         return True
