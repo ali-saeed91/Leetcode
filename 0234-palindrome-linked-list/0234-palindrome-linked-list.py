@@ -9,7 +9,6 @@ class Solution:
             return True
         cur = head
         arr =[]
-        rev =[]
         while cur is not None:
             arr.append(cur.val)
             cur =cur.next
