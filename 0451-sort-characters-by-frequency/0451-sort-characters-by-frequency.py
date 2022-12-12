@@ -3,11 +3,11 @@ class Solution:
         maxHeap = []
         out=""
         s = Counter(s)
-        # print(s)
+        print(s)
         for num, freq in s.items():
             maxHeap.append([-freq, num])
         heapify(maxHeap)
-        # print(maxHeap)
+        print(maxHeap)
         for i in range(0,len(maxHeap)):
             freq,num = heappop(maxHeap)
             while abs(freq) > 0:
