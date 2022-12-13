@@ -1,25 +1,16 @@
 class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
+        dic = {}
         arr = s.split()
         # print(arr)
-        maps= {}
-        if len(arr) != len(pattern):
+        if len(pattern) != len(arr):
             return False
-        p = Counter(pattern)
-        st = Counter(arr)
-        # print(p)
-        # print(st)
-        set1 = set(p)
-        set2 = set(st)
-        if len(set1) != len(set2):
+        if len(set(arr)) != len((set(pattern))):
             return False
-        
-        # print(set1)
-        # print(set2)
         for i in range(len(arr)):
-            if arr[i] not in maps:
-                maps[arr[i]] = pattern[i]  
-            elif maps[arr[i]] != pattern[i]:
-                return False
+            if arr[i] not in dic:
+                dic[arr[i]] = pattern[i]
+            else:
+                if dic[arr[i]] != pattern[i]:
+                    return False
         return True
-    
