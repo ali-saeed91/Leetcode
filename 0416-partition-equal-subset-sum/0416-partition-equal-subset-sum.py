@@ -1,8 +1,10 @@
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
         total = sum(nums)
-        if total % 2 ==1 : return False
-        else : half = total // 2 
+        if total % 2 ==1 :
+            return False
+        else :
+            half = total // 2 
         cache = {} 
         def helper(i,target):
             if i >= len(nums):
