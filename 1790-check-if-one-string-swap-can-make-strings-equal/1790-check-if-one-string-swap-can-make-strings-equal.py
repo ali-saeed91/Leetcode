@@ -12,8 +12,7 @@ class Solution:
             if s1[i] != s2[i]:
                 idx.append(i)
                 val.append(s2[i])
-        print(idx)
-        print(val)
+       
         if len(val) == 2:
             return True
         return False
