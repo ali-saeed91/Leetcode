@@ -4,9 +4,9 @@ class Solution:
         for num in nums:
             heappush(maxHeap, -num)
         # print(maxHeap)    
-        heapify(maxHeap)
+        # heapify(maxHeap)
         # print(maxHeap)
         for i in range(k-1):
             heappop(maxHeap)
         # print(maxHeap)
-        return -maxHeap[0]  
+        return -maxHeap[0]
